@@ -23,7 +23,7 @@
             function f_CalcIMC($Altura,$Peso)
             {
                 $Altura = pow($Altura,2);
-                return $Calc = number_format($Peso/$Altura,1);
+                return $Calc = number_format($Peso/$Altura,2);
             }
         ?>
     <body>
@@ -68,7 +68,6 @@
                         {
                                 continue;
                         }
-                        
                         $retorno = array_combine($cabecalho,$linha);
                         echo "<tr class='corpotabela'><td>".$retorno['NOME']."</td>";
                         echo "<td>".$retorno['PESO']."</td>";
@@ -81,7 +80,6 @@
                         $DtNsc=explode("/",$DataNasc);
                         $DataNasc=$DtNsc[2]."-".$DtNsc[1]."-".$DtNsc[0];
                         echo "<td>".f_Idade($DataNasc)."</td></tr>";
-
                     }
 
                     fclose($cadastro);
