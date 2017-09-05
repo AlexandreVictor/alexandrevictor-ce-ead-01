@@ -23,7 +23,7 @@
             function f_CalcIMC($Altura,$Peso)
             {
                 $Altura = pow($Altura,2);
-                return $Calc = number_format($Peso/$Altura,2);
+                return $Calc = number_format($Peso/$Altura,2,",",".");
             }
         ?>
     <body>
